@@ -48,4 +48,4 @@ Generates a files: actions.js, actionsTypes.js, reducer.js and selectors.js for 
 
      option -l | -local
 
-generate files on actual folder / path
+Generate files on actual folder / path
