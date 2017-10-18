@@ -23,7 +23,7 @@ var reducer = function() {
   return "" +
   "import * as types from './actionTypes';\n\n"+
   "const initialState = {\n"+
-  " entry: null,]\n"+
+  " entry: null,\n"+
   "};\n\n"+
   "export default function reduce(state = initialState, action = {}) {\n" +
   " switch (action.type) {\n" +
