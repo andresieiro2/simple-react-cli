@@ -1,8 +1,10 @@
-#!/usr/bin/env node
+#!/bin/sh
+':' //; exec "$(command -v nodejs || command -v node)" "$0" "$@"
+
 'use strict';
 
 var commander = require('commander');
-var colors = require('colors');
+
 var help = require('./help');
 commander
 .version('1.0.0')
