@@ -8,7 +8,8 @@ var commander = require('commander');
 var help = require('./help');
 commander
 .version('1.0.0')
-.command('create <required> [name] [type]', 'create files , types: react-component , redux , native-component')
+.command('generate <required> [name] [type]', 'Command to create files. Types: react-component , redux , native-component')
+.alias('g')
 // .command('search [query]', 'search with optional query').alias('s')
 .on('--help', help );
 commander.parse(process.argv)
