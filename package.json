@@ -1,0 +1,35 @@
+{
+  "name": "react-cli",
+  "version": "1.0.0",
+  "description": "CLI for build React/Redux/Native Components",
+  "preferGlobal": true,
+  "bin": {
+    "react-cli": "react-cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresieiro2/react-cli.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "cli",
+    "components",
+    "native"
+  ],
+  "author": "André Sieiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andresieiro2/react-cli/issues"
+  },
+  "homepage": "https://github.com/andresieiro2/react-cli#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.11.0",
+    "fs": "0.0.1-security",
+    "mkdirp": "^0.5.1"
+  }
+}
