@@ -39,8 +39,6 @@ Generates a files: actions.js, actionsTypes.js, reducer.js and selectors.js for 
 ----------
 
 
-----------
-
 
 *Other options:*
 
@@ -49,5 +47,5 @@ Generates a files: actions.js, actionsTypes.js, reducer.js and selectors.js for 
 
 
      option -l | -local
-     
+
 generate files on actual folder / path

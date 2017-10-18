@@ -1,6 +1,6 @@
 {
   "name": "simple-react-cli",
-  "version": "1.1.1",
+  "version": "1.1.11",
   "description": "CLI for build React/Redux/Native Components",
   "preferGlobal": true,
   "main":  "react-cli.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andresieiro2/react-cli.git"
+    "url": "git+https://github.com/andresieiro2/simple-react-cli.git"
   },
   "keywords": [
     "react",
