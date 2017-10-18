@@ -1,17 +1,52 @@
-Examples:
 
-Commands:
 
-generate
-  react-cli g MyComponent react-component  
-  (generates a state component on ./src/components/MyComponent/index.js)
+**Commands**
+=======
 
-  react-cli g MyComponent react-component -s
-  react-cli g MyComponent react-component -stateless   
-  (generates a stateless component on ./src/components/myComponent/index.js)
+generate | g
+-------
 
-  react-cli g MyReduxFiles redux
-  ( generates a files: actions.js, actionsTypes.js, reducer.js and selectors.js for redux apps on ./src/store/myReduxFiles  )
 
-  option -l | -local
+----------
+
+
+*Examples:*
+
+    react-cli g MyComponent react-component  
+
+  Generates a state component on ./src/components/MyComponent/index.js
+
+
+
+
+----------
+
+
+      react-cli g MyComponent react-component -s
+      react-cli g MyComponent react-component -stateless   
+
+  Generates a stateless component on ./src/components/myComponent/index.js
+
+
+----------
+
+
+      react-cli g MyReduxFiles redux
+
+Generates a files: actions.js, actionsTypes.js, reducer.js and selectors.js for redux apps on ./src/store/myReduxFiles
+
+
+----------
+
+
+----------
+
+
+*Other options:*
+
+
+----------
+
+
+     option -l | -local
     generate files on actual folder / path
