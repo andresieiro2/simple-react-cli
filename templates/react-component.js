@@ -2,7 +2,7 @@ var component = function(stateless, name) {
   if(stateless){
     return "" +
       "import React from 'react'\n\n" +
-      "const "+ name +" = ({}) => (\n" +
+      "const "+ name +" = () => (\n" +
       " <div>HELLO CLI SIEIRO</div>\n" +
       ");\n\n" +
       "export default "+ name + ";";
