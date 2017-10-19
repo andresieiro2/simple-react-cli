@@ -1,9 +1,11 @@
 {
   "name": "simple-react-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "CLI for build React/Redux/Native Components",
   "preferGlobal": true,
   "main": "react-cli.js",
+  "engines" : { "node" : ">=6.10" },
+  "engineStrict" : true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
