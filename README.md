@@ -1,3 +1,4 @@
+Requires node.js 6.10+
 
 **Commands**
 =======
