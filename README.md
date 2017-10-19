@@ -13,6 +13,7 @@ project | p
 *Generates a react project component at ~actualPath~/MyProject*
 
 **React Native Project**
+
     react-cli p native MyProject  
 
 *Generates a react native project component at ~actualPath~/MyProject*
