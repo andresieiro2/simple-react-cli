@@ -1,7 +1,5 @@
 Requires node.js 6.10+
 
-Requires node.js 6.10+
-
 **Commands**
 =======
 
