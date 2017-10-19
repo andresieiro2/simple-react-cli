@@ -1,6 +1,6 @@
 {
   "name": "simple-react-cli",
-  "version": "1.3",
+  "version": "1.3.0",
   "description": "CLI for build React/Redux/Native Components",
   "preferGlobal": true,
   "main": "react-cli.js",
