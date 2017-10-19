@@ -25,12 +25,24 @@ var help = function() {
   console.log(colors.yellow('       react-cli g react-component MyComponent -s'));
   console.log(colors.yellow('       react-cli g react-component MyComponent -stateless') + '   ( Generates a stateless component at ./src/components/myComponent/index.js ')
   console.log('');
-  console.log(colors.yellow('       react-cli g native-component MyComponent') + '   ( Generates a state component at ./src/components/MyComponent/index.js ) ');
+  console.log(colors.yellow('       react-cli g react-component MyComponent  -c'))
+  console.log(colors.yellow('       react-cli g react-component MyComponent  -connected') + '   ( Generates a component connected to redux store at ./src/components/myComponent/index.js ')
+  console.log('');
+  console.log(colors.yellow('       react-cli g react-component MyComponent  -c -s'))
+  console.log(colors.yellow('       react-cli g react-component MyComponent  -connected -stateless') + '   ( Generates a stateless component connected to redux store at ./src/components/myComponent/index.js ')
   console.log('');
   console.log('   React Native Component');
   console.log('');
+  console.log(colors.yellow('       react-cli g native-component MyComponent') + '   ( Generates a state component at ./src/components/MyComponent/index.js ) ');
+  console.log('');
   console.log(colors.yellow('       react-cli g native-component MyComponent -s'));
   console.log(colors.yellow('       react-cli g native-component MyComponent -stateless') + '   ( Generates a stateless component at ./src/components/myComponent/index.js ) ')
+  console.log('');
+  console.log(colors.yellow('       react-cli g native-component MyComponent  -c'))
+  console.log(colors.yellow('       react-cli g native-component MyComponent  -connected') + '   ( Generates a component connected to redux store at ./src/components/myComponent/index.js ')
+  console.log('');
+  console.log(colors.yellow('       react-cli g native-component MyComponent  -c -s'))
+  console.log(colors.yellow('       react-cli g native-component MyComponent  -connected -stateless') + '   ( Generates a stateless component connected to redux store at ./src/components/myComponent/index.js ')
   console.log('');
   console.log('   Redux Actions / ActionType / Selectors / Reducer');
   console.log('');

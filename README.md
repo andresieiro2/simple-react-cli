@@ -1,4 +1,6 @@
 
+Requires node.js 6.10+
+
 **Commands**
 =======
 
@@ -41,6 +43,14 @@ generate | g
 
   *Generates a stateless component at ./src/components/myComponent/index.js*
 
+**React Connected Component / React Stateless Connected Component**
+
+    react-cli g react-component MyComponent  -c
+    react-cli g react-component MyComponent  -connected
+    react-cli g react-component MyComponent  -s -c
+    react-cli g react-component MyComponent  -stateless -connected
+ *Generates a component connected to redux store at ./src/components/myComponent/index.js*
+
 ----------
 
 ----------
@@ -58,6 +68,15 @@ generate | g
       react-cli g native-component MyComponent  -stateless   
 
   *Generates a stateless component at ./src/components/myComponent/index.js*
+
+
+**React Native Connected Component / React Native Stateless Connected Component**
+
+    react-cli g native-component MyComponent  -c
+    react-cli g native-component MyComponent  -connected
+    react-cli g native-component MyComponent  -s -c
+    react-cli g native-component MyComponent  -stateless -connected
+ *Generates a component connected to redux store at ./src/components/myComponent/index.js*
 
 ----------
 

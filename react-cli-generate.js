@@ -14,6 +14,7 @@ var createFile = require('./utils/createFile');
 
 subCommand
 .option('-s, -stateless [optional]', 'create a stateless component')
+.option('-c, -connected [optional]', 'create a component connected to the redux store')
 .option('-l, -local [optional]', 'create files on actual location')
 .action( function(type, name , args) {
   var folderName = name.charAt(0).toLowerCase() + name.slice(1);
@@ -26,7 +27,7 @@ subCommand
       args.Local ? componentsDir = "." : null;
 
       checkPath(componentsDir);
-      createFile(componentsDir, filePath, reactComponent(args.Stateless, name));
+      createFile(componentsDir, filePath, reactComponent(args.Stateless, args.Connected, name));
       break;
     case 'redux':
       var storeDir = process.cwd()+'/src/store/'+folderName;
@@ -49,7 +50,7 @@ subCommand
       args.Local ? componentsDir = "." : null;
 
       checkPath(componentsDir);
-      createFile(componentsDir, filePath, nativeComponent(args.Stateless, name));
+      createFile(componentsDir, filePath, nativeComponent(args.Stateless,  args.Connected, name));
       break;
   }
 
