@@ -16,7 +16,6 @@ subCommand
 .option('-s, -stateless [optional]', 'create a stateless component')
 .option('-l, -local [optional]', 'create files on actual location')
 .action( function(type, name , args) {
-
   var folderName = name.charAt(0).toLowerCase() + name.slice(1);
 
 

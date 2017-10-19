@@ -6,6 +6,16 @@ var help = function() {
   console.log('');
   console.log(' COMMANDS');
   console.log('');
+  console.log(' project | p:'.magenta);
+  console.log('');
+  console.log('   React Project');
+  console.log('');
+  console.log(colors.yellow('       react-cli p react MyProject') + '   ( Generates a react project at ~actualPath~/MyProject ) ');
+  console.log('');
+  console.log('   React Native Project');
+  console.log('');
+  console.log(colors.yellow('       react-cli p native MyProject') + '   ( Generates a react native project at ~actualPath~/MyProject ) ');
+  console.log('');
   console.log(' generate | g:'.magenta);
   console.log('');
   console.log('   React Component');

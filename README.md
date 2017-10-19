@@ -2,6 +2,23 @@
 **Commands**
 =======
 
+project | p
+-------
+
+----------
+**React Project**
+    react-cli p react MyProject  
+
+*Generates a react project at ~actualPath~/MyProject*
+**React Native Project**
+    react-cli p native MyProject  
+
+*Generates a react native project at ~actualPath~/MyProject*
+
+----------
+
+----------
+
 generate | g
 -------
 
