@@ -98,3 +98,26 @@ generate | g
      option -l | -local
 
 *Generate files at actual folder / path*
+
+
+----------
+
+set | s
+-------
+
+----------
+
+**Components destination folder**
+
+      react-cli s component-path /new/path/
+
+*Change the default components destination folder (  "/src/components/"  )*
+
+
+----------
+
+
+**Store destination folder**
+      react-cli s store-path /new/path/
+
+  *Change the default store destination folder (  "/src/store/  ")*
