@@ -12,7 +12,6 @@ var templatesPaths = require('./templates/paths');
 
 subCommand
 .action( function(option, value ) {
-  console.log(templatesPaths);
   switch (option) {
     case 'component-path':
       paths.componentsDir = value;
