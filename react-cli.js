@@ -10,7 +10,7 @@ commander
 .alias('g')
 .command('project <required> [type] [name] ', 'Command to init a project')
 .alias('p')
-.command('set <required> [action] [value] ', 'Command to init a project')
+.command('set <required> [action] [value] ', 'Set global values of cli')
 .alias('s')
 // .command('search [query]', 'search with optional query').alias('s')
 .on('--help', help );
