@@ -4,9 +4,7 @@
 'use strict';
 
 var subCommand = require('commander');
-
 var colors = require('colors');
-var checkPath = require('./utils/checkPath');
 var createFile = require('./utils/createFile');
 var clone = require('git-clone');
 var deleteDirectory =  require('./utils/deleteDirectory');

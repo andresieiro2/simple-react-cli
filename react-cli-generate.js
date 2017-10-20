@@ -11,6 +11,7 @@ var fs = require('fs');
 var colors = require('colors');
 var checkPath = require('./utils/checkPath');
 var createFile = require('./utils/createFile');
+var paths = require('./utils/paths');
 
 subCommand
 .option('-s, -stateless [optional]', 'create a stateless component')
@@ -22,7 +23,7 @@ subCommand
 
   switch(type) {
     case 'react-component':
-      var componentsDir = process.cwd()+'/src/components/'+folderName;
+      var componentsDir = process.cwd() + paths.componentsDir + folderName;
       var filePath = "/index.js";
       args.Local ? componentsDir = "." : null;
 
@@ -30,7 +31,7 @@ subCommand
       createFile(componentsDir, filePath, reactComponent(args.Stateless, args.Connected, name));
       break;
     case 'redux':
-      var storeDir = process.cwd()+'/src/store/'+folderName;
+      var storeDir = process.cwd()+ paths.reduxStoreDir +folderName;
       var filePath ;
       args.Local ? storeDir = "." : null;
 
@@ -45,7 +46,7 @@ subCommand
       createFile(storeDir, filePath, storeComponents.selectors());
       break;
     case 'native-component':
-      var componentsDir = process.cwd()+'/src/components/'+folderName;
+      var componentsDir = process.cwd() + paths.componentsDir + folderName;
       var filePath = "/index.js";
       args.Local ? componentsDir = "." : null;
 
