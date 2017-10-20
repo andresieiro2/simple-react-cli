@@ -7,7 +7,7 @@ var createFile = function(pathFolder, pathFile,  fileString ) {
   stream.once('open', function(fd) {
     stream.write(fileString);
     stream.end();
-    console.log(colors.green("Component Created! on ")+pathFolder+pathFile );
+    console.log(colors.green("File Created! at ")+pathFolder+pathFile );
   });
 }
 
