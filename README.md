@@ -110,6 +110,7 @@ set | s
 **Components destination folder**
 
       react-cli s component-path /new/path/
+      react-cli set component-path /new/path/
 
 *Change the default components destination folder (  "/src/components/"  )*
 
@@ -118,6 +119,8 @@ set | s
 
 
 **Store destination folder**
-      react-cli s store-path /new/path/
 
+      react-cli s store-path /new/path/
+      react-cli set store-path /new/path/
+      
   *Change the default store destination folder (  "/src/store/  ")*
