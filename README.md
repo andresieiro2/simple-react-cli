@@ -6,10 +6,11 @@ Requires node.js 6.10+
 project | p
 -------
 
+There are a sample projects, not required for generate command
+
 ----------
 **React Project**
 
-There are a sample projects, not required for generate command
 
     react-cli p react MyProject  
 
