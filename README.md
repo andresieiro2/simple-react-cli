@@ -9,6 +9,8 @@ project | p
 ----------
 **React Project**
 
+There are a sample projects, not required for generate command
+
     react-cli p react MyProject  
 
 *Generates a react project component at ~actualPath~/MyProject*
@@ -122,5 +124,5 @@ set | s
 
       react-cli s store-path /new/path/
       react-cli set store-path /new/path/
-      
+
   *Change the default store destination folder (  "/src/store/  ")*

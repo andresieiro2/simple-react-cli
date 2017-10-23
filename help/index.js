@@ -9,6 +9,7 @@ var help = function() {
   console.log(' project | p:'.magenta);
   console.log('');
   console.log('   React Project');
+  console.log('   There are a sample projects, not required for generate command');
   console.log('');
   console.log(colors.yellow('       react-cli p react MyProject') + '   ( Generates a react project at ~actualPath~/MyProject ) ');
   console.log('');
