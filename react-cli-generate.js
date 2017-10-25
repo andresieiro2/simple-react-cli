@@ -53,6 +53,8 @@ subCommand
       checkPath(componentsDir);
       createFile(componentsDir, filePath, nativeComponent(args.Stateless,  args.Connected, name));
       break;
+    default:
+      return false;
   }
 
 })

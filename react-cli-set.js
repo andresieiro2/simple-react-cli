@@ -22,6 +22,7 @@ subCommand
       createFile(__dirname + "/utils/", '/paths.js', templatesPaths(paths) );
       break;
     default:
+      return false;
   }
 });
 

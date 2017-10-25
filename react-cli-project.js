@@ -12,7 +12,7 @@ var deleteDirectory =  require('./utils/deleteDirectory');
 subCommand
 .action( function(type, name, args) {
   var path = process.cwd()+"/"+name
-  var gitUrl;
+  var gitUrl = "";
   switch (type) {
     case 'react':
       gitUrl = 'https://github.com/andresieiro2/react-base';
@@ -21,7 +21,7 @@ subCommand
         gitUrl = 'https://github.com/andresieiro2/react-native-base';
         break;
     default:
-
+      return false;
   }
   clone(
     gitUrl ,

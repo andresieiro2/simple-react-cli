@@ -8,7 +8,7 @@ var help = require('./help');
 commander
 .command('generate <required> [type] [name] ', 'Command to create files. Types: react-component , redux , native-component')
 .alias('g')
-.command('project <required> [type] [name] ', 'Command to init a project')
+.command('project <required> [type] <required> [name]  <required>  ', 'Command to init a project')
 .alias('p')
 .command('set <required> [action] [value] ', 'Set global values of cli')
 .alias('s')
