@@ -7,7 +7,7 @@ var component = function(stateless, connected, name, scssFile) {
         "import { connect } from 'react-redux';\n" +
         "import '." + scssFile + "'; \n\n" +
         "const "+ name +" = () => (\n" +
-        ' <div id="'+name+'">\n   '+ name +'\n </div>\n' +
+        ' <div class="'+name+'">\n   '+ name +'\n </div>\n' +
         ");\n\n" +
         "const mapStateToProps = (state) => {\n" +
           " return { };\n" +
@@ -21,7 +21,7 @@ var component = function(stateless, connected, name, scssFile) {
         "import React from 'react';\n" +
         "import '." + scssFile + "'; \n\n" +
         "const "+ name +" = () => (\n" +
-        ' <div id="'+name+'" >\n   '+ name +'\n </div>\n' +
+        ' <div class="'+name+'" >\n   '+ name +'\n </div>\n' +
         ");\n\n" +
         "export default "+ name + ";";
     }
@@ -35,7 +35,7 @@ var component = function(stateless, connected, name, scssFile) {
       "class " + name + " extends React.Component {\n" +
       " render() {\n" +
       "   return (\n" +
-      '     <div id="'+name+'" >\n      '+ name +'\n     </div>\n' +
+      '     <div class="'+name+'" >\n      '+ name +'\n     </div>\n' +
       "   );\n" +
       " }\n" +
       "};\n\n" +
@@ -53,7 +53,7 @@ var component = function(stateless, connected, name, scssFile) {
         "export default class "+ name +" extends React.Component {\n" +
         " render() {\n" +
         "   return (\n" +
-        '     <div id="'+name+'" >\n      '+ name +'\n     </div>\n' +
+        '     <div class="'+name+'" >\n      '+ name +'\n     </div>\n' +
         "   );\n" +
         " }\n" +
         "};";

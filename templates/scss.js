@@ -1,5 +1,5 @@
 var createScssFile = function (name) {
-  return "#"+name+" {\n\n};";
+  return "."+name+" {\n\n};";
 }
 
 
