@@ -5,6 +5,7 @@
 
 var subCommand = require('commander');
 var reactComponent = require('./templates/react-component');
+var sccsTemplate = require('./templates/scss');
 var storeComponents = require('./templates/store');
 var nativeComponent = require('./templates/native');
 var fs = require('fs');
@@ -29,6 +30,7 @@ subCommand
 
       checkPath(componentsDir);
       createFile(componentsDir, filePath, reactComponent(args.Stateless, args.Connected, name));
+      createFile(componentsDir, '/index.scss', sccsTemplate(name));
       break;
     case 'redux':
       var storeDir = process.cwd()+ paths.reduxStoreDir +folderName;
