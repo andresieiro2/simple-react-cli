@@ -1,11 +1,11 @@
-var component = function(stateless, connected, name) {
+var component = function(stateless, connected, name, scssFile) {
   if(stateless){
 
     if(connected){
       return "" +
-        "import React from 'react'\n" +
+        "import React from 'react';\n" +
         "import { connect } from 'react-redux';\n" +
-        "import './index.scss' \n\n" +
+        "import '." + scssFile + "'; \n\n" +
         "const "+ name +" = () => (\n" +
         ' <div id="'+name+'">"+ name +"</div>\n' +
         ");\n\n" +
@@ -18,8 +18,8 @@ var component = function(stateless, connected, name) {
         "export default connect(mapStateToProps, mapDispatchToProps)("+ name +");\n";
     }else {
       return "" +
-        "import React from 'react'\n" +
-        "import './index.scss' \n\n" +
+        "import React from 'react';\n" +
+        "import '." + scssFile + "'; \n\n" +
         "const "+ name +" = () => (\n" +
         ' <div id="'+name+'" >"+ name +"</div>\n' +
         ");\n\n" +
@@ -29,8 +29,9 @@ var component = function(stateless, connected, name) {
   } else {
     if(connected) {
       return "" +
-      "import React from 'react'\n" +
-      "import { connect } from 'react-redux';\n\n" +
+      "import React from 'react';\n" +
+      "import { connect } from 'react-redux';\n" +
+      "import '." + scssFile + "'; \n\n" +
       "class " + name + " extends React.Component {\n" +
       " render() {\n" +
       "   return (\n" +
@@ -47,8 +48,8 @@ var component = function(stateless, connected, name) {
       "export default connect(mapStateToProps, mapDispatchToProps)("+ name +");\n";
     }else {
       return "" +
-        "import React from 'react'\n" +
-        "import './index.scss' \n\n" +
+        "import React from 'react';\n" +
+        "import '." + scssFile + "'; \n\n" +
         "export default class "+ name +" extends React.Component {\n" +
         " render() {\n" +
         "   return (\n" +

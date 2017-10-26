@@ -1,5 +1,4 @@
 var nativeComponent = function (stateless, connected, name) {
-  console.log(stateless);
   if(stateless){
 
     if(connected) {

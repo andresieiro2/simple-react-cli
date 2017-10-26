@@ -19,18 +19,33 @@ subCommand
 .option('-c, -connected [optional]', 'create a component connected to the redux store')
 .option('-l, -local [optional]', 'create files on actual location')
 .action( function(type, name , args) {
-  var folderName = name.charAt(0).toLowerCase() + name.slice(1);
-
 
   switch(type) {
     case 'react-component':
-      var componentsDir = process.cwd() + paths.componentsDir + folderName;
-      var filePath = "/index.js";
+      var folderName ;
+      var componentsDir = process.cwd() + paths.componentsDir;
+      var filePath = name.split('/');
+      var scssFile ;
+
+      if(filePath.length > 1 ){
+        name = filePath[filePath.length - 1];
+        filePath.pop();
+        folderName = filePath.join('/') + "/"
+        filePath =  name + ".js";
+        scssFile = '/'+ name +'.scss' ;
+      } else {
+        folderName = name;
+        filePath =  "/index.js";
+        scssFile = "/index.scss";
+      }
+
+      folderName = folderName.charAt(0).toLowerCase() + folderName.slice(1);
+      componentsDir+= folderName;
       args.Local ? componentsDir = "." : null;
 
       checkPath(componentsDir);
-      createFile(componentsDir, filePath, reactComponent(args.Stateless, args.Connected, name));
-      createFile(componentsDir, '/index.scss', sccsTemplate(name));
+      createFile(componentsDir, filePath, reactComponent(args.Stateless, args.Connected, name, scssFile ));
+      createFile(componentsDir , scssFile, sccsTemplate(name));
       break;
     case 'redux':
       var storeDir = process.cwd()+ paths.reduxStoreDir +folderName;
@@ -48,8 +63,23 @@ subCommand
       createFile(storeDir, filePath, storeComponents.selectors());
       break;
     case 'native-component':
-      var componentsDir = process.cwd() + paths.componentsDir + folderName;
-      var filePath = "/index.js";
+      var folderName ;
+      var componentsDir = process.cwd() + paths.componentsDir;
+      var filePath = name.split('/');
+
+
+      if(filePath.length > 1 ){
+        name = filePath[filePath.length - 1];
+        filePath.pop();
+        folderName = filePath.join('/') + "/"
+        filePath =  name + ".js";
+      } else {
+        folderName = name;
+        filePath =  "/index.js";
+      }
+
+      folderName = folderName.charAt(0).toLowerCase() + folderName.slice(1);
+      componentsDir+= folderName;
       args.Local ? componentsDir = "." : null;
 
       checkPath(componentsDir);
