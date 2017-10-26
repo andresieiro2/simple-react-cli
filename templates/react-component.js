@@ -7,7 +7,7 @@ var component = function(stateless, connected, name) {
         "import { connect } from 'react-redux';\n" +
         "import './index.scss' \n\n" +
         "const "+ name +" = () => (\n" +
-          " <div id="+name+">"+ name +"</div>\n" +
+        ' <div id="'+name+'">"+ name +"</div>\n' +
         ");\n\n" +
         "const mapStateToProps = (state) => {\n" +
           " return { };\n" +
@@ -21,7 +21,7 @@ var component = function(stateless, connected, name) {
         "import React from 'react'\n" +
         "import './index.scss' \n\n" +
         "const "+ name +" = () => (\n" +
-        " <div id="+name+">"+ name +"</div>\n" +
+        ' <div id="'+name+'" >"+ name +"</div>\n' +
         ");\n\n" +
         "export default "+ name + ";";
     }
@@ -34,7 +34,7 @@ var component = function(stateless, connected, name) {
       "class " + name + " extends React.Component {\n" +
       " render() {\n" +
       "   return (\n" +
-      "     <div id="+name+">"+ name +"</div>\n" +
+      '     <div id="'+name+'" >"+ name +"</div>\n' +
       "   );\n" +
       " }\n" +
       "};\n\n" +
@@ -52,7 +52,7 @@ var component = function(stateless, connected, name) {
         "export default class "+ name +" extends React.Component {\n" +
         " render() {\n" +
         "   return (\n" +
-        "     <div id="+name+">"+ name +"</div>\n" +
+        '     <div id="'+name+'" >"+ name +"</div>\n' +
         "   );\n" +
         " }\n" +
         "};";
