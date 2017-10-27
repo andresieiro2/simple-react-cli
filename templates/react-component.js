@@ -32,7 +32,7 @@ var component = function(stateless, connected, name, scssFile) {
       "import React from 'react';\n" +
       "import { connect } from 'react-redux';\n" +
       "import '." + scssFile + "'; \n\n" +
-      "className " + name + " extends React.Component {\n" +
+      "class " + name + " extends React.Component {\n" +
       " render() {\n" +
       "   return (\n" +
       '     <div className="'+name+'" >\n      '+ name +'\n     </div>\n' +
@@ -50,7 +50,7 @@ var component = function(stateless, connected, name, scssFile) {
       return "" +
         "import React from 'react';\n" +
         "import '." + scssFile + "'; \n\n" +
-        "export default className "+ name +" extends React.Component {\n" +
+        "export default class "+ name +" extends React.Component {\n" +
         " render() {\n" +
         "   return (\n" +
         '     <div className="'+name+'" >\n      '+ name +'\n     </div>\n' +
