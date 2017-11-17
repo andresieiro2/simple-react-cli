@@ -48,7 +48,8 @@ subCommand
       createFile(componentsDir , scssFile, sccsTemplate(name));
       break;
     case 'redux':
-      var storeDir = process.cwd()+ paths.reduxStoreDir +folderName;
+      folderName = name.charAt(0).toLowerCase() + name.slice(1);
+      var storeDir = process.cwd()+ paths.reduxStoreDir + folderName;
       var filePath ;
       args.Local ? storeDir = "." : null;
 
