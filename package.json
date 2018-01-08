@@ -1,11 +1,14 @@
 {
   "name": "simple-react-cli",
-  "version": "1.5.56",
+  "version": "1.5.58",
   "description": "CLI for build React/Redux/Native Components",
   "preferGlobal": true,
   "main": "react-cli.js",
+  "bin": {
+    "react-cli": "react-cli.js"
+  },
   "engines": {
-    "node": ">=6.10"
+    "node": ">=8.9.4"
   },
   "engineStrict": true,
   "scripts": {
