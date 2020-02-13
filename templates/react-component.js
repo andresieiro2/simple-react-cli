@@ -1,59 +1,59 @@
-var component = function(stateless, connected, name, scssFile) {
-  if(stateless){
+var component = function (stateless, connected, name, styledFile) {
+  if (stateless) {
 
-    if(connected){
+    if (connected) {
       return "" +
         "import React from 'react';\n" +
         "import { connect } from 'react-redux';\n" +
-        "import '." + scssFile + "'; \n\n" +
-        "const "+ name +" = () => (\n" +
-        ' <div className="'+name+'">\n   '+ name +'\n </div>\n' +
+        "import Styled from '." + styledFile + "'; \n\n" +
+        "const " + name + " = () => (\n" +
+        ' <Styled className="' + name + '">\n   ' + name + '\n </Styled>\n' +
         ");\n\n" +
         "const mapStateToProps = (state) => {\n" +
-          " return { };\n" +
+        " return { };\n" +
         "}\n\n" +
         "const mapDispatchToProps = dispatch => {\n" +
-          " return { };\n" +
+        " return { };\n" +
         "}\n\n" +
-        "export default connect(mapStateToProps, mapDispatchToProps)("+ name +");\n";
-    }else {
+        "export default connect(mapStateToProps, mapDispatchToProps)(" + name + ");\n";
+    } else {
       return "" +
         "import React from 'react';\n" +
-        "import '." + scssFile + "'; \n\n" +
-        "const "+ name +" = () => (\n" +
-        ' <div className="'+name+'" >\n   '+ name +'\n </div>\n' +
+        "import Styled from '." + styledFile + "'; \n\n" +
+        "const " + name + " = () => (\n" +
+        ' <Styled className="' + name + '" >\n   ' + name + '\n </Styled>\n' +
         ");\n\n" +
-        "export default "+ name + ";";
+        "export default " + name + ";";
     }
 
   } else {
-    if(connected) {
-      return "" +
-      "import React from 'react';\n" +
-      "import { connect } from 'react-redux';\n" +
-      "import '." + scssFile + "'; \n\n" +
-      "class " + name + " extends React.Component {\n" +
-      " render() {\n" +
-      "   return (\n" +
-      '     <div className="'+name+'" >\n      '+ name +'\n     </div>\n' +
-      "   );\n" +
-      " }\n" +
-      "};\n\n" +
-      "const mapStateToProps = (state) => {\n" +
-      " return { };\n" +
-      "}\n\n" +
-      "const mapDispatchToProps = dispatch => {\n" +
-      " return { };\n" +
-      "}\n\n" +
-      "export default connect(mapStateToProps, mapDispatchToProps)("+ name +");\n";
-    }else {
+    if (connected) {
       return "" +
         "import React from 'react';\n" +
-        "import '." + scssFile + "'; \n\n" +
-        "export default class "+ name +" extends React.Component {\n" +
+        "import { connect } from 'react-redux';\n" +
+        "import Styled from '." + styledFile + "'; \n\n" +
+        "class " + name + " extends React.Component {\n" +
         " render() {\n" +
         "   return (\n" +
-        '     <div className="'+name+'" >\n      '+ name +'\n     </div>\n' +
+        '     <Styled className="' + name + '" >\n      ' + name + '\n     </Styled>\n' +
+        "   );\n" +
+        " }\n" +
+        "};\n\n" +
+        "const mapStateToProps = (state) => {\n" +
+        " return { };\n" +
+        "}\n\n" +
+        "const mapDispatchToProps = dispatch => {\n" +
+        " return { };\n" +
+        "}\n\n" +
+        "export default connect(mapStateToProps, mapDispatchToProps)(" + name + ");\n";
+    } else {
+      return "" +
+        "import React from 'react';\n" +
+        "import Styled from '." + styledFile + "'; \n\n" +
+        "export default class " + name + " extends React.Component {\n" +
+        " render() {\n" +
+        "   return (\n" +
+        '     <Styled className="' + name + '" >\n      ' + name + '\n     </Styled>\n' +
         "   );\n" +
         " }\n" +
         "};";
