@@ -21,7 +21,7 @@ subCommand
     "create a component connected to the redux store"
   )
   .option("-l, -local [optional]", "create files on actual location")
-  .action(function(type, name, args) {
+  .action(function (type, name, args) {
     switch (type) {
       case "react-component":
         var folderName;
@@ -34,11 +34,11 @@ subCommand
           filePath.pop();
           folderName = filePath.join("/") + "/";
           filePath = name + ".js";
-          styledFile = "/" + name + ".scss";
+          styledFile = "/styled-" + name + ".js";
         } else {
           folderName = name;
           filePath = "/index.js";
-          styledFile = "/index.js";
+          styledFile = "/styled.js";
         }
 
         folderName = folderName.charAt(0).toLowerCase() + folderName.slice(1);
